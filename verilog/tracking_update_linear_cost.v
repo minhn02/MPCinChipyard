@@ -295,8 +295,8 @@ wire   [0:0] icmp_ln160_fu_429_p2;
 wire   [31:0] mul5_i_i_fu_310_p2;
 reg   [31:0] mul5_i_i_reg_615;
 wire    ap_CS_fsm_state8;
-wire   [6:0] empty_71_fu_494_p2;
-reg   [6:0] empty_71_reg_623;
+wire   [6:0] empty_66_fu_494_p2;
+reg   [6:0] empty_66_reg_623;
 wire    ap_CS_fsm_state10;
 wire   [0:0] icmp_ln215_fu_458_p2;
 reg   [3:0] xref_col_address0;
@@ -521,7 +521,7 @@ wire   [5:0] zext_ln168_fu_366_p1;
 wire   [5:0] add_ln169_fu_382_p2;
 wire   [5:0] zext_ln160_fu_425_p1;
 wire   [5:0] add_ln161_fu_441_p2;
-wire   [2:0] empty_70_fu_470_p1;
+wire   [2:0] empty_65_fu_470_p1;
 wire   [5:0] p_shl1_fu_482_p3;
 wire   [6:0] p_shl_fu_474_p3;
 wire   [6:0] p_shl1_cast_fu_490_p1;
@@ -615,7 +615,7 @@ tracking_update_linear_cost_Pipeline_VITIS_LOOP_86_1 grp_update_linear_cost_Pipe
     .ap_done(grp_update_linear_cost_Pipeline_VITIS_LOOP_86_1_fu_204_ap_done),
     .ap_idle(grp_update_linear_cost_Pipeline_VITIS_LOOP_86_1_fu_204_ap_idle),
     .ap_ready(grp_update_linear_cost_Pipeline_VITIS_LOOP_86_1_fu_204_ap_ready),
-    .empty(empty_71_reg_623),
+    .empty(empty_66_reg_623),
     .xref_col_address0(grp_update_linear_cost_Pipeline_VITIS_LOOP_86_1_fu_204_xref_col_address0),
     .xref_col_ce0(grp_update_linear_cost_Pipeline_VITIS_LOOP_86_1_fu_204_xref_col_ce0),
     .xref_col_we0(grp_update_linear_cost_Pipeline_VITIS_LOOP_86_1_fu_204_xref_col_we0),
@@ -639,7 +639,7 @@ tracking_update_linear_cost_Pipeline_VITIS_LOOP_86_17 grp_update_linear_cost_Pip
     .ap_done(grp_update_linear_cost_Pipeline_VITIS_LOOP_86_17_fu_212_ap_done),
     .ap_idle(grp_update_linear_cost_Pipeline_VITIS_LOOP_86_17_fu_212_ap_idle),
     .ap_ready(grp_update_linear_cost_Pipeline_VITIS_LOOP_86_17_fu_212_ap_ready),
-    .empty(empty_71_reg_623),
+    .empty(empty_66_reg_623),
     .q_col_address0(grp_update_linear_cost_Pipeline_VITIS_LOOP_86_17_fu_212_q_col_address0),
     .q_col_ce0(grp_update_linear_cost_Pipeline_VITIS_LOOP_86_17_fu_212_q_col_ce0),
     .q_col_we0(grp_update_linear_cost_Pipeline_VITIS_LOOP_86_17_fu_212_q_col_we0),
@@ -728,7 +728,7 @@ tracking_update_linear_cost_Pipeline_VITIS_LOOP_93_1 grp_update_linear_cost_Pipe
     .q_col_address1(grp_update_linear_cost_Pipeline_VITIS_LOOP_93_1_fu_246_q_col_address1),
     .q_col_ce1(grp_update_linear_cost_Pipeline_VITIS_LOOP_93_1_fu_246_q_col_ce1),
     .q_col_q1(q_col_q1),
-    .empty(empty_71_reg_623),
+    .empty(empty_66_reg_623),
     .q_1_address0(grp_update_linear_cost_Pipeline_VITIS_LOOP_93_1_fu_246_q_1_address0),
     .q_1_ce0(grp_update_linear_cost_Pipeline_VITIS_LOOP_93_1_fu_246_q_1_ce0),
     .q_1_we0(grp_update_linear_cost_Pipeline_VITIS_LOOP_93_1_fu_246_q_1_we0),
@@ -1088,7 +1088,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((icmp_ln215_fu_458_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state10))) begin
-        empty_71_reg_623[6 : 2] <= empty_71_fu_494_p2[6 : 2];
+        empty_66_reg_623[6 : 2] <= empty_66_fu_494_p2[6 : 2];
     end
 end
 
@@ -1986,9 +1986,9 @@ assign bitcast_ln116_1_fu_357_p1 = xor_ln116_fu_351_p2;
 
 assign bitcast_ln116_fu_347_p1 = tiny_rho;
 
-assign empty_70_fu_470_p1 = i_12_fu_118[2:0];
+assign empty_65_fu_470_p1 = i_12_fu_118[2:0];
 
-assign empty_71_fu_494_p2 = (p_shl_fu_474_p3 - p_shl1_cast_fu_490_p1);
+assign empty_66_fu_494_p2 = (p_shl_fu_474_p3 - p_shl1_cast_fu_490_p1);
 
 assign g_1_address1 = grp_update_linear_cost_4_fu_263_g_1_address1;
 
@@ -2044,7 +2044,7 @@ assign p_shl1_cast_fu_490_p1 = p_shl1_fu_482_p3;
 
 assign p_shl1_fu_482_p3 = {{i_12_fu_118}, {2'd0}};
 
-assign p_shl_fu_474_p3 = {{empty_70_fu_470_p1}, {4'd0}};
+assign p_shl_fu_474_p3 = {{empty_65_fu_470_p1}, {4'd0}};
 
 assign q_1_d1 = grp_update_linear_cost_Pipeline_VITIS_LOOP_93_1_fu_246_q_1_d1;
 
@@ -2099,7 +2099,7 @@ always @ (posedge ap_clk) begin
     zext_ln169_reg_552[63:6] <= 58'b0000000000000000000000000000000000000000000000000000000000;
     tmp_s_reg_585[1:0] <= 2'b00;
     zext_ln161_reg_605[63:6] <= 58'b0000000000000000000000000000000000000000000000000000000000;
-    empty_71_reg_623[1:0] <= 2'b00;
+    empty_66_reg_623[1:0] <= 2'b00;
 end
 
 endmodule //tracking_update_linear_cost

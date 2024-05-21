@@ -78,12 +78,12 @@ wire   [5:0] p_shl_fu_114_p3;
 wire   [5:0] p_shl1_cast_fu_130_p1;
 wire   [0:0] icmp_ln186_fu_161_p2;
 wire   [2:0] add_ln185_fu_155_p2;
-wire   [1:0] empty_87_fu_187_p1;
+wire   [1:0] empty_82_fu_187_p1;
 wire   [3:0] p_shl1_mid1_fu_199_p3;
 wire   [5:0] p_shl_mid1_fu_191_p3;
 wire   [5:0] p_shl1_cast_mid1_fu_207_p1;
 wire   [5:0] p_mid1_fu_211_p2;
-wire   [5:0] empty_85_fu_134_p2;
+wire   [5:0] empty_80_fu_134_p2;
 wire   [3:0] select_ln185_fu_167_p3;
 wire   [5:0] j_cast_fu_225_p1;
 wire   [5:0] select_ln185_2_fu_217_p3;
@@ -321,9 +321,9 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign empty_85_fu_134_p2 = (p_shl_fu_114_p3 - p_shl1_cast_fu_130_p1);
+assign empty_80_fu_134_p2 = (p_shl_fu_114_p3 - p_shl1_cast_fu_130_p1);
 
-assign empty_87_fu_187_p1 = add_ln185_fu_155_p2[1:0];
+assign empty_82_fu_187_p1 = add_ln185_fu_155_p2[1:0];
 
 assign empty_fu_110_p1 = ap_sig_allocacmp_i_25[1:0];
 
@@ -341,15 +341,15 @@ assign p_shl1_cast_mid1_fu_207_p1 = p_shl1_mid1_fu_199_p3;
 
 assign p_shl1_fu_122_p3 = {{empty_fu_110_p1}, {2'd0}};
 
-assign p_shl1_mid1_fu_199_p3 = {{empty_87_fu_187_p1}, {2'd0}};
+assign p_shl1_mid1_fu_199_p3 = {{empty_82_fu_187_p1}, {2'd0}};
 
 assign p_shl_fu_114_p3 = {{empty_fu_110_p1}, {4'd0}};
 
-assign p_shl_mid1_fu_191_p3 = {{empty_87_fu_187_p1}, {4'd0}};
+assign p_shl_mid1_fu_191_p3 = {{empty_82_fu_187_p1}, {4'd0}};
 
 assign select_ln185_1_fu_175_p3 = ((icmp_ln186_fu_161_p2[0:0] == 1'b1) ? add_ln185_fu_155_p2 : ap_sig_allocacmp_i_25);
 
-assign select_ln185_2_fu_217_p3 = ((icmp_ln186_fu_161_p2[0:0] == 1'b1) ? p_mid1_fu_211_p2 : empty_85_fu_134_p2);
+assign select_ln185_2_fu_217_p3 = ((icmp_ln186_fu_161_p2[0:0] == 1'b1) ? p_mid1_fu_211_p2 : empty_80_fu_134_p2);
 
 assign select_ln185_fu_167_p3 = ((icmp_ln186_fu_161_p2[0:0] == 1'b1) ? 4'd0 : ap_sig_allocacmp_j_load);
 

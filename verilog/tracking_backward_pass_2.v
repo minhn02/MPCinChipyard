@@ -381,7 +381,7 @@ wire   [2:0] empty_fu_334_p1;
 wire   [5:0] p_shl1_fu_346_p3;
 wire   [6:0] p_shl_fu_338_p3;
 wire   [6:0] p_shl1_cast_fu_354_p1;
-wire   [2:0] empty_120_fu_377_p1;
+wire   [2:0] empty_115_fu_377_p1;
 wire   [6:0] p_shl2_fu_381_p3;
 wire   [6:0] zext_ln88_fu_373_p1;
 wire   [5:0] or_ln88_4_fu_400_p2;
@@ -1494,7 +1494,7 @@ always @ (*) begin
     ap_block_state2_on_subcall_done = ((grp_backward_pass_2_Pipeline_VITIS_LOOP_86_128_fu_249_ap_done == 1'b0) | (grp_backward_pass_2_Pipeline_VITIS_LOOP_86_1_fu_240_ap_done == 1'b0));
 end
 
-assign empty_120_fu_377_p1 = i[2:0];
+assign empty_115_fu_377_p1 = i[2:0];
 
 assign empty_fu_334_p1 = add_ln48_fu_328_p2[2:0];
 
@@ -1548,7 +1548,7 @@ assign p_shl1_cast_fu_354_p1 = p_shl1_fu_346_p3;
 
 assign p_shl1_fu_346_p3 = {{add_ln48_fu_328_p2}, {2'd0}};
 
-assign p_shl2_fu_381_p3 = {{empty_120_fu_377_p1}, {4'd0}};
+assign p_shl2_fu_381_p3 = {{empty_115_fu_377_p1}, {4'd0}};
 
 assign p_shl_fu_338_p3 = {{empty_fu_334_p1}, {4'd0}};
 
