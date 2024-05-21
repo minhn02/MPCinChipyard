@@ -1,0 +1,39 @@
+
+#########################################################################################
+# pre-process Vitis accelerator into a single blackbox file
+#########################################################################################
+
+vitis_blocks_dir := $(patsubst %/,%,$(dir $(abspath $(lastword $(MAKEFILE_LIST)))))
+
+ACCEL_TYPE ?= tracking
+ACCEL_NAME = vitis_$(ACCEL_TYPE)
+
+# name of output pre-processed verilog file
+PREPROC_VERILOG_DIR = $(vitis_blocks_dir)
+PREPROC_VERILOG = $(PREPROC_VERILOG_DIR)/$(ACCEL_NAME).preprocessed.v
+
+.PHONY: default $(PREPROC_VERILOG)
+default: $(PREPROC_VERILOG)
+
+#########################################################################################
+# includes and vsrcs
+#########################################################################################
+
+lookup_srcs = $(shell find -L $(1)/ -name target -prune -o -iname "*.$(2)" -print 2> /dev/null)
+
+VLOG_DIR = $(vitis_blocks_dir)/vsrc/$(ACCEL_TYPE)
+
+ALL_VSRCS := $(shell find $(VLOG_DIR) -name '*.v')
+
+#########################################################################################
+# pre-process using custom script to replace the includes (but leave rest unaffected)
+#########################################################################################
+
+# PREPROC_SCRIPT = $(nvdla_blocks_dir)/../../../../../scripts/insert-includes.py
+
+$(PREPROC_VERILOG): $(ALL_VSRCS)
+	mkdir -p $(dir $(PREPROC_VERILOG))
+	cat $(ALL_VSRCS) > $(PREPROC_VERILOG)
+
+clean:
+	rm -rf $(nvdla_blocks_dir)/*.preprocessed.v

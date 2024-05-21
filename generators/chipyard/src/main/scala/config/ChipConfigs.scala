@@ -5,6 +5,8 @@ import freechips.rocketchip.diplomacy._
 import freechips.rocketchip.subsystem.{MBUS, SBUS}
 import testchipip.soc.{OBUS}
 
+import vitis_mpc._
+
 // A simple config demonstrating how to set up a basic chip in Chipyard
 class ChipLikeRocketConfig extends Config(
   //==================================
@@ -132,3 +134,8 @@ class VerilatorCITetheredChipLikeRocketConfig extends Config(
     new chipyard.config.WithNoResetSynchronizers ++
     new ChipLikeRocketConfig) ++
   new chipyard.harness.WithMultiChip(1, new ChipBringupHostConfig))
+
+  class MPSRocketConfig extends Config(
+    new WithVitisMPCTracker ++
+    new RocketConfig
+  )
